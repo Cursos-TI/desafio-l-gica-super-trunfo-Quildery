@@ -11,7 +11,7 @@ int main (){
     int pontosTuristicos1;
     float densidade1;
     float pib_per_capital1;
-    float Cidadevencedora[50];
+    char Cidadevencedora[50];
     
     // Carta 2 
     char estado2;
@@ -48,7 +48,7 @@ int main (){
     scanf(" %d", &pontosTuristicos1);
 
     // Entrada de dados da carta 2
-     printf("Dados da carta 2: \n");
+    printf("Dados da carta 2: \n");
     printf("Estado (A-H):");
     scanf(" %c", &estado2);
 
@@ -70,14 +70,19 @@ int main (){
     printf("Número de Pontos Turísticos:");
     scanf(" %d", &pontosTuristicos2);
 
-    // Cálculo de densidade populacional e pob_per_capital
-
+    // Cálculo de densidade populacional e Pib per capital
+    densidade1 = populacao1 / area1;
+    pib_per_capital1 = (pib1 * 1000000000) / populacao1;
+    densidade2 = populacao2 / area2;
+    pib_per_capital2 = (pib2 * 1000000000) / populacao2;
     
-
+    // Comparação e exibição do vencedor
     if (populacao1 > populacao2) {
-        printf("Cidade 1 tem maior Pupolação que Cidade 2. \n");
+        printf("Cidade 1 tem maior População que Cidade 2. \n");
+        printf("A cidade vencedora é %s\n", nomeCidade1);
     } else {
         printf("Cidade 2 tem maior População. \n");
+        printf("A cidade vencedora é %s\n", nomeCidade2);
     }
     
      printf("A Cidade vencedora é %s \n",Cidadevencedora);
