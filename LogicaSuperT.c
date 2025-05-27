@@ -85,8 +85,6 @@ int main (){
         printf("A cidade vencedora é %s\n", nomeCidade2);
     }
     
-     printf("A Cidade vencedora é %s \n",Cidadevencedora);
-     
      return 0;
 }
 
