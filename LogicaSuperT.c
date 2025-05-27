@@ -76,18 +76,21 @@ int main (){
     densidade2 = populacao2 / area2;
     pib_per_capital2 = (pib2 * 1000000000) / populacao2;
     
-    // Comparação e exibição do vencedor
+     // Comparação e exibição do vencedor
+    printf("\nResultado:\n");
     if (populacao1 > populacao2) {
-        printf("Cidade 1 tem maior População que Cidade 2. \n");
+        printf("Cidade 1 (%s) tem maior população que Cidade 2 (%s).\n", nomeCidade1, nomeCidade2);
         printf("A cidade vencedora é %s\n", nomeCidade1);
-    } else {
-        printf("Cidade 2 tem maior População. \n");
+    } else if (populacao2 > populacao1) {
+        printf("Cidade 2 (%s) tem maior população que Cidade 1 (%s).\n", nomeCidade2, nomeCidade1);
         printf("A cidade vencedora é %s\n", nomeCidade2);
+    } else {
+        printf("As cidades %s e %s têm a mesma população.\n", nomeCidade1, nomeCidade2);
+        printf("A cidade vencedora é Nenhuma (empate)\n");
     }
     
      return 0;
 }
-
     
 
 
